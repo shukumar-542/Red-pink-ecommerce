@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AboutUs from './pages/AboutUs/AboutUs.jsx'
 import HomePage from './pages/HomePage/HomePage.jsx'
+import Login from './pages/Login/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
           <Route index  element={<HomePage/>} />
           <Route path='/about-us' element={<AboutUs />} />
         </Route>
+        <Route path='/auth/login' element={<Login/>} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
