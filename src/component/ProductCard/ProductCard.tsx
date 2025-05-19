@@ -1,6 +1,7 @@
 import { FaBangladeshiTakaSign, FaRegHeart } from 'react-icons/fa6'
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { TiShoppingCart } from 'react-icons/ti'
+import Colors from '../../constants/Colors'
 
 const ProductCard = ({ product }) => {
     return (
@@ -23,10 +24,10 @@ const ProductCard = ({ product }) => {
                 <p className='text-gray-500'>Sold</p>
             </div>
             <div className='flex items-center justify-between gap-2 text-white pt-5'>
-                <div className='bg-[#C14196] rounded-full p-2 cursor-pointer '>
+                <div className='bg-[#C14196] hover:bg-[#32004A]  transition-all duration-300 rounded-full p-2 cursor-pointer '>
                     <RiShoppingCart2Line size={22} />
                 </div>
-                <button className='bg-[#C14196] w-full py-2 rounded-md  cursor-pointer'>Buy Now</button>
+                <button className={`bg-[${Colors.primary}] hover:bg-[#32004A] transition-all duration-300 w-full py-2 rounded-md  cursor-pointer`}>Buy Now</button>
             </div>
         </div>
     )
