@@ -7,6 +7,7 @@ import FromMoisturizer from '../../component/FromMoisturizer/FromMoisturizer'
 import FromSerum from '../../component/FromSerum/FromSerum'
 import FromSunScreen from '../../component/FromSunScreen/FromSunScreen'
 import FromToner from '../../component/FromToner/FromToner'
+import BrandCaurosel from '../../component/BrandCaurosel/BrandCaurosel'
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <FromSerum/>
       <FromSunScreen/>
       <FromToner/>
+      <BrandCaurosel/>
     </div>
   )
 }
