@@ -9,6 +9,7 @@ import brand5 from "../../assets/brand5.webp"
 import brand6 from "../../assets/brand6.webp"
 import brand7 from "../../assets/brand7.webp"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const BrandCarousel = () => {
     const settings = {
@@ -51,17 +52,19 @@ const BrandCarousel = () => {
         <div className="container mx-auto  ">
             <div className='flex justify-between items-center py-5'>
                 <p ><span className='text-4xl font-semibold'>Shop From</span> <span className='text-[#C14196] text-4xl font-medium'> Brand</span></p>
-                <p className='flex items-center gap-2 text-xl cursor-pointer border-b border-black hover:border-transparent transition-all duration-700 hover:text-[#C14196] '>
+                <Link to={"/brand"}>
+                    <p className='flex items-center gap-2 text-xl cursor-pointer border-b border-black hover:border-transparent transition-all duration-700 hover:text-[#C14196] '>
 
-                    <span>View All</span>
-                    <FaArrowRightLong />
-                </p>
+                        <span>View All</span>
+                        <FaArrowRightLong />
+                    </p>
+                </Link>
             </div>
             <Slider {...settings}>
                 {brands.map((brand, index) => (
                     <div
                         key={index}
-                        className="px-2" 
+                        className="px-2"
                     >
                         <div className="bg-white border rounded-md p-2 shadow-md">
                             <img src={brand} alt={`brand-${index}`} className="h-20 mx-auto" />
