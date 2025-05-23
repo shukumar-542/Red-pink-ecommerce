@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs/AboutUs.jsx'
 import HomePage from './pages/HomePage/HomePage.jsx'
 import Login from './pages/Login/Login.jsx'
 import ProductDetails from './pages/ProductDetails/ProductDetails.jsx'
+import CheckOut from './pages/CheckOut/CheckOut.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
           <Route index  element={<HomePage/>} />
           <Route path='/about-us' element={<AboutUs />} />
           <Route path='/product-details/:id' element={<ProductDetails/>} />
+          <Route path='/checkout' element={<CheckOut/>} />
         </Route>
         <Route path='/auth/login' element={<Login/>} />
       </Routes>

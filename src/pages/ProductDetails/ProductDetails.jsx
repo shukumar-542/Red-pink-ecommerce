@@ -8,6 +8,7 @@ import { useState } from "react"
 import { RiShoppingCart2Line } from "react-icons/ri"
 import Colors from "../../constants/Colors"
 import ProductDescriptions from "../../component/ui/ProductDescriptions/ProductDescriptions"
+import { Link } from "react-router-dom"
 const ProductDetails = () => {
     const [countProduct, setCountProduct] = useState(1)
     return (
@@ -40,7 +41,9 @@ const ProductDetails = () => {
 
                         </div>
                         <div className="flex items-center gap-5 text-white">
-                            <button className="bg-[#4F378B] py-2 px-5 rounded-md">BUY NOW</button>
+                            <Link to={'/checkout'}>
+                                <button className="bg-[#4F378B] py-2 cursor-pointer px-5 rounded-md">BUY NOW</button>
+                            </Link>
                             <button className="bg-[#C14196] py-2 px-5 rounded-md">ADD TO CART</button>
                         </div>
                         <p>Skin discoloration, dark spots, and acne scars making you feel down? One great option is the Tiam Vita B3 Source, a strong Korean serum taking the skincare world by storm. Niacinamide (Vitamin B3) and Arbutin, the two main ingredients in this light mix, reveal a brighter, more radiant you.</p>
@@ -143,7 +146,7 @@ const ProductDetails = () => {
 
             {/* Product details section bottom */}
 
-            <ProductDescriptions/>
+            <ProductDescriptions />
         </div>
     )
 }
