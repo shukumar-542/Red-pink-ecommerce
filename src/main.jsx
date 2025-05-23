@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage/HomePage.jsx'
 import Login from './pages/Login/Login.jsx'
 import ProductDetails from './pages/ProductDetails/ProductDetails.jsx'
 import CheckOut from './pages/CheckOut/CheckOut.jsx'
+import Cart from './pages/Cart/Cart.jsx'
+import Register from './pages/Register/Register.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,8 +20,10 @@ createRoot(document.getElementById('root')).render(
           <Route path='/about-us' element={<AboutUs />} />
           <Route path='/product-details/:id' element={<ProductDetails/>} />
           <Route path='/checkout' element={<CheckOut/>} />
+          <Route path='/cart' element={<Cart/>} />
         </Route>
         <Route path='/auth/login' element={<Login/>} />
+        <Route path='/auth/register' element={<Register/>} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

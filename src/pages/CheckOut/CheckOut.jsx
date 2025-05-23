@@ -47,9 +47,9 @@ const CheckOut = () => {
             </div>
 
             <Card className="rounded-lg shadow-sm my-4 ">
-                <div className="grid grid-cols-12 items-center gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
                     {/* Product Info */}
-                    <div className="col-span-4 flex items-center gap-4">
+                    <div className="col-span-1 md:col-span-4 flex items-center gap-4">
                         {/* Replace with your image path */}
                         <img
                             src={img}
@@ -62,7 +62,7 @@ const CheckOut = () => {
                     </div>
 
                     {/* Price */}
-                    <div className="col-span-3 text-center">
+                    <div className="col-span-1 md:col-span-3 text-center">
                         <p className="text-lg font-semibold text-black">
                             ৳1300{" "}
                             <span className="line-through text-gray-500 text-sm">৳1700</span>
@@ -70,12 +70,12 @@ const CheckOut = () => {
                     </div>
 
                     {/* Quantity */}
-                    <div className="col-span-2 text-center">
+                    <div className="col-span-1 md:col-span-2 text-center">
                         <p className="text-lg font-medium">1</p>
                     </div>
 
                     {/* Subtotal */}
-                    <div className="col-span-3 text-right">
+                    <div className="col-span-1 nd:col-span-3 text-center md:text-right">
                         <p className="text-lg font-semibold">৳1300</p>
                     </div>
                 </div>
