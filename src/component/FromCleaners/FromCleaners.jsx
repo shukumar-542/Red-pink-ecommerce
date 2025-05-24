@@ -6,6 +6,7 @@ import prod3 from "../../assets/cleaner3.webp"
 import prod4 from "../../assets/cleaner4.webp"
 import prod5 from "../../assets/cleaner5.webp"
 import ProductCard from "../ProductCard/ProductCard"
+import { Link } from "react-router-dom"
 
 const FromCleaners = () => {
     const products = [
@@ -164,7 +165,9 @@ const FromCleaners = () => {
         <div className="container mx-auto mb-5">
             <div className="flex justify-between items-center">
                 <p className={`text-2xl font-medium border-b-2 border-[${Colors.secondary}]`}>Shop From <span className={`text-[${Colors.secondary}]`}>Cleanser</span></p>
-                <p className={`flex items-center cursor-pointer gap-2 hover:text-[${Colors.secondary}]`}><span>View All</span><MdArrowForwardIos /></p>
+                <Link to={`/category/${"cleanser"}`}>
+                    <p className={`flex items-center cursor-pointer gap-2 hover:text-[${Colors.secondary}]`}><span>View All</span><MdArrowForwardIos /></p>
+                </Link>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-8'>

@@ -1,13 +1,11 @@
-import React from 'react'
-import ProductCard from '../ProductCard/ProductCard'
-import prod1 from "../../assets/prod1.webp"
-import prod2 from "../../assets/prod2.webp"
-import prod3 from "../../assets/prod3.webp"
-import prod4 from "../../assets/prod4.webp"
-import prod5 from "../../assets/prod5.webp"
-import Colors from '../../constants/Colors'
-import { Link } from 'react-router-dom'
-const products = [
+import prod1 from "../assets/prod1.webp"
+import prod2 from "../assets/prod2.webp"
+import prod3 from "../assets/prod3.webp"
+import prod4 from "../assets/prod4.webp"
+import prod5 from "../assets/prod5.webp"
+
+
+export const products = [
     {
         id: 'KSB-P0022',
         name: 'Tiam Vita B3 Source 40ml',
@@ -159,28 +157,3 @@ const products = [
             'A cult-favorite serum formulated with propolis and niacinamide to calm, brighten, and nourish tired skin with a natural glow.',
     },
 ];
-
-
-const PopularProduct = () => {
-    return (
-        <div className='mt-5 px-2 md:px-0'>
-            <p className='customFont text-3xl text-center'>Koren Shop Bangladesh</p>
-            <p className='text-2xl md:text-5xl font-bold text-center'>Popular Product</p>
-            <div className='container mx-auto my-10'>
-                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5'>
-                    {
-                        products?.map(product => <ProductCard product={product} />)
-                    }
-                </div>
-                {/* <div className='flex justify-center mt-8'>
-                    <Link to={"/category/"}><button className={`bg-[#FFFFFF] shadow-5xl border-b-2 cursor-pointer hover:bg-[${Colors.primary}] px-2 hover:text-white transition-all duration-300 text-xl border-b-[#C14196] rounded-sm`}>
-                        View All
-                    </button></Link>
-
-                </div> */}
-            </div>
-        </div>
-    )
-}
-
-export default PopularProduct

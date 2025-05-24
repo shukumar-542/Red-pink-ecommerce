@@ -11,6 +11,7 @@ import CheckOut from './pages/CheckOut/CheckOut.jsx'
 import Cart from './pages/Cart/Cart.jsx'
 import Register from './pages/Register/Register.jsx'
 import Brand from './pages/Brand/Brand.jsx'
+import CategoryProduct from './pages/CategoryProduct/CategoryProduct.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/checkout' element={<CheckOut/>} />
           <Route path='/cart' element={<Cart/>} />
           <Route path='/brand' element={<Brand/>} />
+          <Route path='/category/:category' element={<CategoryProduct/>} />
         </Route>
         <Route path='/auth/login' element={<Login/>} />
         <Route path='/auth/register' element={<Register/>} />
