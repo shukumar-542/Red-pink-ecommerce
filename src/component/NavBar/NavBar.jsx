@@ -7,6 +7,7 @@ import { CiUser } from "react-icons/ci";
 import { GiShoppingCart } from "react-icons/gi";
 import { IoOptionsOutline } from "react-icons/io5";
 import { categories } from "../../constants/category";
+import { BiSupport } from "react-icons/bi";
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -71,35 +72,45 @@ const NavBar = () => {
             </div>
 
             {/* Bottom Navigation */}
-            <div className="container mx-auto flex items-center gap-8 relative px-4">
-                <div className="relative">
-                    <button
-                        onClick={() => setCategoryOpen(!categoryOpen)}
-                        className="bg-[#4F378B] py-3 cursor-pointer px-8 text-white flex items-center gap-2 "
-                    >
-                        <IoOptionsOutline size={20} /> Category <IoIosArrowDown size={20} />
-                    </button>
+            <div className="container mx-auto flex justify-between items-center">
+                <div className="flex items-center gap-8 relative px-4">
+                    <div className="relative">
+                        <button
+                            onClick={() => setCategoryOpen(!categoryOpen)}
+                            className="bg-[#4F378B] py-3 cursor-pointer px-8 text-white flex items-center gap-2 "
+                        >
+                            <IoOptionsOutline size={20} /> Category <IoIosArrowDown size={20} />
+                        </button>
 
-                    {/* Dropdown */}
-                    {categoryOpen && (
-                        <div className={`absolute flex flex-wrap gap-10 left-0 mt-2 min-w-4xl bg-white shadow-lg rounded transition-all duration-300 ease-in-out transform z-50 `}>
-                            {categories.map((category, index) => (
-                                <div key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer ">
-                                    <img className="h-20 w-20" src={category?.icon} alt="" />
-                                    <p className="text-center">{category?.name}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )}
+                        {/* Dropdown */}
+                        {categoryOpen && (
+                            <div className={`absolute flex flex-wrap gap-10 left-0 mt-2 min-w-4xl bg-white shadow-lg rounded transition-all duration-300 ease-in-out transform z-50 `}>
+                                {categories.map((category, index) => (
+                                    <div key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer ">
+                                        <img className="h-20 w-20" src={category?.icon} alt="" />
+                                        <p className="text-center">{category?.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    <NavLink to={"/"}><p className="cursor-pointer hover:text-[#4F378B]">Home</p></NavLink>
+                    <NavLink to={"/category/:category"}><p className="cursor-pointer hover:text-[#4F378B]">Products</p></NavLink>
+                    <NavLink><p >Combo</p></NavLink>
+                    <NavLink>Offers</NavLink>
+                    <NavLink to={"/category/:category"}>New Arrival</NavLink>
+                    <NavLink to={"/category/:category"}>Best Sellers</NavLink>
                 </div>
-
-                <NavLink to={"/"}><p className="cursor-pointer hover:text-[#4F378B]">Home</p></NavLink>
-                <p className="cursor-pointer hover:text-[#4F378B]">Products</p>
-                <NavLink><p >Combo</p></NavLink>
-                <NavLink>Offers</NavLink>
-                <NavLink>New Arrival</NavLink>
-                <NavLink>Best Sellers</NavLink>
+                <div className="flex items-center gap-2">
+                    <BiSupport size={25} />
+                    <div>
+                        <span className="text-gray-700">Hotline:</span>
+                        <p className="text-[#4F378B]">+8801872999038</p>
+                    </div>
+                </div>
             </div>
+
         </div>
     );
 };
