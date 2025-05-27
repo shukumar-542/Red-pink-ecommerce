@@ -162,9 +162,9 @@ const FromCleaners = () => {
         },
     ];
     return (
-        <div className="container mx-auto mb-5">
+        <div className="container mx-auto mb-5 px-2 md:px-0">
             <div className="flex justify-between items-center">
-                <p className={`text-2xl font-medium border-b-2 border-[${Colors.secondary}]`}>Shop From <span className={`text-[${Colors.secondary}]`}>Cleanser</span></p>
+                <p className={`text-md md:text-2xl font-medium border-b-2 border-[${Colors.secondary}]`}>Shop From <span className={`text-[${Colors.secondary}]`}>Cleanser</span></p>
                 <Link to={`/category/${"cleanser"}`}>
                     <p className={`flex items-center cursor-pointer gap-2 hover:text-[${Colors.secondary}]`}><span>View All</span><MdArrowForwardIos /></p>
                 </Link>

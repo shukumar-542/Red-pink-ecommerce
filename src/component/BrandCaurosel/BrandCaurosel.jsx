@@ -49,11 +49,11 @@ const BrandCarousel = () => {
     const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 
     return (
-        <div className="container mx-auto  ">
+        <div className="container mx-auto px-2 md:px-0  overflow-hidden">
             <div className='flex justify-between items-center py-5'>
-                <p ><span className='text-4xl font-semibold'>Shop From</span> <span className='text-[#C14196] text-4xl font-medium'> Brand</span></p>
+                <p ><span className='text-md md:text-4xl font-semibold'>Shop From</span> <span className='text-[#C14196]  font-medium'> Brand</span></p>
                 <Link to={"/brand"}>
-                    <p className='flex items-center gap-2 text-xl cursor-pointer border-b border-black hover:border-transparent transition-all duration-700 hover:text-[#C14196] '>
+                    <p className='flex items-center gap-2 text-md md:text-xl cursor-pointer border-b border-black hover:border-transparent transition-all duration-700 hover:text-[#C14196] '>
 
                         <span>View All</span>
                         <FaArrowRightLong />

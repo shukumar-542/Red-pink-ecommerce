@@ -172,12 +172,7 @@ const PopularProduct = () => {
                         products?.map(product => <ProductCard product={product} />)
                     }
                 </div>
-                {/* <div className='flex justify-center mt-8'>
-                    <Link to={"/category/"}><button className={`bg-[#FFFFFF] shadow-5xl border-b-2 cursor-pointer hover:bg-[${Colors.primary}] px-2 hover:text-white transition-all duration-300 text-xl border-b-[#C14196] rounded-sm`}>
-                        View All
-                    </button></Link>
-
-                </div> */}
+               
             </div>
         </div>
     )

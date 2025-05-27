@@ -15,8 +15,8 @@ const HomePage = () => {
         <HeroSection/>
         <Categories/>
         <PopularProduct/>
-        <SpecialOffers/>
-        <FromCleaners/>
+         <SpecialOffers/>
+       <FromCleaners/>
       <FromMoisturizer/>
       <FromSerum/>
       <FromSunScreen/>

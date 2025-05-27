@@ -6,8 +6,11 @@ import { NavLink } from "react-router-dom";
 import { CiUser } from "react-icons/ci";
 import { GiShoppingCart } from "react-icons/gi";
 import { IoOptionsOutline } from "react-icons/io5";
-import { categories } from "../../constants/category";
+import { brands, categories } from "../../constants/category";
 import { BiSupport } from "react-icons/bi";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import BrandDropdown from "../BrandDropDown/BrandDropDown";
+import SkinCareDropdown from "../SkinCareDropdown/SkinCareDropdown";
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -72,9 +75,9 @@ const NavBar = () => {
             </div>
 
             {/* Bottom Navigation */}
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="flex items-center gap-8 relative px-4">
-                    <div className="relative">
+            <div className="container mx-auto flex justify-between items-center py-5 md:py-0">
+                <div className="flex items-center gap-3 md:gap-8 relative px-4">
+                    <div className="hidden md:block relative">
                         <button
                             onClick={() => setCategoryOpen(!categoryOpen)}
                             className="bg-[#4F378B] py-3 cursor-pointer px-8 text-white flex items-center gap-2 "
@@ -82,7 +85,6 @@ const NavBar = () => {
                             <IoOptionsOutline size={20} /> Category <IoIosArrowDown size={20} />
                         </button>
 
-                        {/* Dropdown */}
                         {categoryOpen && (
                             <div className={`absolute flex flex-wrap gap-10 left-0 mt-2 min-w-4xl bg-white shadow-lg rounded transition-all duration-300 ease-in-out transform z-50 `}>
                                 {categories.map((category, index) => (
@@ -95,18 +97,23 @@ const NavBar = () => {
                         )}
                     </div>
 
-                    <NavLink to={"/"}><p className="cursor-pointer hover:text-[#4F378B]">Home</p></NavLink>
-                    <NavLink to={"/category/:category"}><p className="cursor-pointer hover:text-[#4F378B]">Products</p></NavLink>
-                    <NavLink><p >Combo</p></NavLink>
-                    <NavLink>Offers</NavLink>
-                    <NavLink to={"/category/:category"}>New Arrival</NavLink>
-                    <NavLink to={"/category/:category"}>Best Sellers</NavLink>
+                    <NavLink to={"/"}><p className="cursor-pointer hover:text-[#4F378B] text-xs md:text-[16px]">Home</p></NavLink>
+                    <NavLink to={"/category/:category"}><p className="cursor-pointer hover:text-[#4F378B] text-xs md:text-[16px]">Products</p></NavLink>
+
+                    <BrandDropdown brands={brands} />
+                    <SkinCareDropdown />
+                    <NavLink><p className="text-xs md:text-[16px]">Combo</p></NavLink>
+                    <NavLink className={"text-xs md:text-[16px]"}>Offers</NavLink>
+                    <NavLink className={"hidden md:block"} to={"/category/:category"}>New Arrival</NavLink>
+                    <NavLink className={"hidden md:block"} to={"/category/:category"}>Best Sellers</NavLink>
                 </div>
-                <div className="flex items-center gap-2">
-                    <BiSupport size={25} />
-                    <div>
-                        <span className="text-gray-700">Hotline:</span>
-                        <p className="text-[#4F378B]">+8801872999038</p>
+                <div >
+                    <div className="hidden md:flex items-center gap-2 ">
+                        <BiSupport size={25} />
+                        <div>
+                            <span className="text-gray-700">Hotline:</span>
+                            <p className="text-[#4F378B]">+8801872999038</p>
+                        </div>
                     </div>
                 </div>
             </div>

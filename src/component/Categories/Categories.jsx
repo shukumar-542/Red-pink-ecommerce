@@ -25,7 +25,7 @@ const Categories = () => {
       {
         breakpoint: 768, // large phones / small tablets
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -39,10 +39,10 @@ const Categories = () => {
     ],
   };
   return (
-    <div className='container mx-auto pb-5'>
-      <div className='flex justify-between items-center py-5'>
-        <p ><span className='text-4xl font-semibold'>Fetured</span> <span className='text-[#C14196] text-4xl font-medium'>Categories</span></p>
-        <p className='flex items-center gap-2 text-xl cursor-pointer border-b border-black hover:border-transparent transition-all duration-700 hover:text-[#C14196] '>
+    <div className='container mx-auto pb-5 overflow-hidden'>
+      <div className='flex justify-between items-center py-5 px-2 md:px-0'>
+        <p ><span className='text-md md:text-4xl font-semibold'>Fetured</span> <span className='text-[#C14196]  font-medium'>Categories</span></p>
+        <p className='flex items-center gap-2 md:text-xl cursor-pointer border-b border-black hover:border-transparent transition-all duration-700 hover:text-[#C14196] '>
 
           <span>View All</span>
           <FaArrowRightLong />

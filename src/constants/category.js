@@ -27,3 +27,51 @@ export const categories = [
   { name: "Body Wash", icon: cat11 },
   { name: "Sunscreen", icon: cat12 }
 ];
+
+export const brands = [
+  "3W clinic", "Anua", "ABPL", "DR FORHERE", "corsx", "EMbala", "HTS", "ELLYON", "Medicube", "Neela", "Lunk", "i am form", "Round Lab",
+  "Beauty of Joseon",
+  "Innisfree",
+  "Laneige",
+  "COSRX",
+  "Etude House",
+  "Sulwhasoo",
+  "Pyunkang Yul",
+  "Numbuzin",
+  "Torriden"
+]
+
+export const skinType = [
+  "Oyle", "Dry", "Combination", "Normal", "Sensitive", "Combine to Dry", "Combine to Oly"
+]
+
+export const skinConcern = ["Acne & Spot Solution",
+  "Aging & Wrinkle",
+  "Dryness & Hydration",
+  "Oiliness & Sebum Control",
+  "Rash, Redness & Sensitivity",
+  "Under Eye Dark Circles & Puffiness",
+  "Fine Line & Puffiness",
+  "Damage Skin Repair & Scars",
+  "Sun Damage & Uneven Skin Tone",
+  "Large Pores",
+  "Whiteheads & Blackheads"]
+
+export const productCategory = ["Ampoule",
+  "Serum",
+  "Moisturizer",
+  "Toner",
+  "Sheet Mask",
+  "Cleanser",
+  "Pimple Patch",
+  "Eye Cream",
+  "Essence",
+  "Kit",
+  "Body Wash",
+  "Sunscreen",
+  "Makeup Remover",
+  "Foundation",
+  "Peeling Gel",
+  "Hair Conditioner",
+  "Sleeping Mask"]
+
