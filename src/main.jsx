@@ -12,10 +12,13 @@ import Cart from './pages/Cart/Cart.jsx'
 import Register from './pages/Register/Register.jsx'
 import Brand from './pages/Brand/Brand.jsx'
 import CategoryProduct from './pages/CategoryProduct/CategoryProduct.jsx'
+import ScrollToTop from './component/ScrollToTop/ScrollToTop.jsx'
+import ReturnPolicy from './pages/ReturnPolicy/ReturnPolicy.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path='/' element={<App />}>
           <Route index  element={<HomePage/>} />
@@ -25,6 +28,9 @@ createRoot(document.getElementById('root')).render(
           <Route path='/cart' element={<Cart/>} />
           <Route path='/brand' element={<Brand/>} />
           <Route path='/category/:category' element={<CategoryProduct/>} />
+          <Route path='/return-refund' element={<ReturnPolicy/>} />
+          <Route path='/shipping-delivery' element={<ReturnPolicy/>} />
+
         </Route>
         <Route path='/auth/login' element={<Login/>} />
         <Route path='/auth/register' element={<Register/>} />

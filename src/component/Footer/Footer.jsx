@@ -1,6 +1,7 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { LuDot, LuPhone } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,30 +19,35 @@ const Footer = () => {
           <div>
             <p className="text-xl font-medium mb-4">Popular Category</p>
             <div className="space-y-2 text-[18px]">
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Home</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Product</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Blogs</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Sitemap</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> FAQ</p>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Home</p>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Product</p>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Blogs</p>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Sitemap</p>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> FAQ</p>
             </div>
           </div>
           <div>
             <p className="text-xl font-medium mb-4">Customer Service</p>
-             <div className="space-y-2 text-[18px]">
+            <div className="space-y-2 text-[18px]">
+              <Link to={"/about-us"}>
                 <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> About Us</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Contact Us</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Return & Refund</p>
+              </Link>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Contact Us</p>
+              <Link to="/return-refund"><p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Return & Refund</p></Link>
+
+              <Link to={"/shipping-delivery"}>
                 <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Shipping & Delivery</p>
-                <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Store Location</p>
+              </Link>
+              <p className="flex items-center cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "><LuDot /> Store Location</p>
             </div>
           </div>
           <div>
             <p className="text-xl font-medium mb-4">Contact Us</p>
             <div className="space-y-2 text-[18px]">
-                <p className="flex gap-2 items-center"><LuPhone /><span className=" cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "> 01303-779646</span></p>
-                <p className="flex gap-2 items-center"><HiOutlineMail /><span className=" cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "> Koreanshop@gmail.com</span></p>
-                <p className="flex gap-2 items-center"><FaLocationDot /><span className=" cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "> Rampura, Banasree, Dhaka</span></p>
-             
+              <p className="flex gap-2 items-center"><LuPhone /><span className=" cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "> 01303-779646</span></p>
+              <p className="flex gap-2 items-center"><HiOutlineMail /><span className=" cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "> Koreanshop@gmail.com</span></p>
+              <p className="flex gap-2 items-center"><FaLocationDot /><span className=" cursor-pointer hover:text-[#C14196] transition-all duration-1000 hover:scale-105 "> Rampura, Banasree, Dhaka</span></p>
+
             </div>
           </div>
         </div>
