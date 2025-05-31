@@ -65,12 +65,9 @@ const NavBar = () => {
                     <NavLink to="/home" onClick={() => setMenuOpen(false)} className="text-xl py-2">Home</NavLink>
                     <NavLink to="/about-us" onClick={() => setMenuOpen(false)} className="text-xl py-2">About us</NavLink>
                     <NavLink to="/contact-us" onClick={() => setMenuOpen(false)} className="text-xl py-2">Contact us</NavLink>
-                    <NavLink to="/feedback-first-step" onClick={() => setMenuOpen(false)} className="text-xl py-2">Feedback</NavLink>
-                    <NavLink to="/notification" onClick={() => setMenuOpen(false)} className="bg-[#FFA175] rounded-full p-2 mt-4">
-                        <IoMdNotifications size={24} color="white" />
-                    </NavLink>
+                    
                     <NavLink to="/login" onClick={() => setMenuOpen(false)} className="text-xl py-2 mt-2">Login</NavLink>
-                    <NavLink to={"/signup"} className="bg-[#FFA175] text-white px-6 py-2 rounded mt-4" onClick={() => setMenuOpen(false)}>Sign Up Here</NavLink>
+                    <NavLink to={"/signup"} className="bg-[#4F378B] text-white px-6 py-2 rounded mt-4" onClick={() => setMenuOpen(false)}>Sign Up Here</NavLink>
                 </div>
             </div>
 
