@@ -8,7 +8,6 @@ import { GiShoppingCart } from "react-icons/gi";
 import { IoOptionsOutline } from "react-icons/io5";
 import { brands, categories } from "../../constants/category";
 import { BiSupport } from "react-icons/bi";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import BrandDropdown from "../BrandDropDown/BrandDropDown";
 import SkinCareDropdown from "../SkinCareDropdown/SkinCareDropdown";
 
@@ -19,10 +18,10 @@ const NavBar = () => {
     // const categories = ["Electronics", "Fashion", "Books", "Home Appliances", "Toys"];
 
     return (
-        <div>
+        <div className=" fixed top-0 left-0 right-0 z-50 bg-white   ">
             {/* Top Navbar */}
-            <div className="py-2 bg-cover border-b border-[#CECECE]">
-                <div className="container mx-auto h-full flex items-center justify-between px-4 md:px-8">
+            <div className="py-2 border-b bg-cover  border-[#CECECE] ">
+                <div className="container mx-auto h-full flex items-center  justify-between px-4 md:px-8">
                     {/* Logo */}
                     <div>
                         <NavLink to={"/"}>
@@ -72,7 +71,7 @@ const NavBar = () => {
             </div>
 
             {/* Bottom Navigation */}
-            <div className="container mx-auto flex justify-between items-center py-5 md:py-0">
+            <div className="container  bg-white  mx-auto flex justify-between items-center py-5 md:py-0 ">
                 <div className="flex items-center gap-3 md:gap-8 relative px-4">
                     <div className="hidden md:block relative">
                         <button
